@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="table.css">
+    </head>
+
+    <body>
+        <div id="tablebox" class="tablebox"></div>
+        <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
+        <script src='art-template.js'></script>
+        <script src="echarts.min.js"></script>
+        <script src='table.js'></script>
+        <script>
+            var data = {
+                year: "2018",
+                area: [
+                    "下城区",
+                    "上城区",
+                    "西湖区",
+                    "拱墅区",
+                    "余杭区",
+                    "江干区",
+                    "滨江区",
+                    "富阳区",
+                    "临安区"
+                ],
+                data: [{
+                    name: "邮件营销",
+                    data: [120, 132, 101, 134, 90, 230, 210, 30, 320]
+                }, {
+                    name: "联盟广告",
+                    data: [220, 182, 191, 234, 290, 330, 310, 33, 45]
+                }, {
+                    name: "视频广告",
+                    data: [150, 232, 201, 154, 190, 330, 410, 400, 320]
+                }, {
+                    name: "搜索引擎",
+                    data: [862, 1018, 964, 1026, 1679, 1600, 1570, 330, 32]
+                }, {
+                    name: '百度',
+                    data: [620, 732, 701, 734, 1090, 1130, 1120, 496, 1000]
+                }, {
+                    name: '谷歌',
+                    data: [120, 132, 101, 134, 290, 230, 220, 145, 478]
+                }, {
+                    name: '必应',
+                    data: [60, 72, 71, 74, 190, 130, 110, 754, 654]
+                }, {
+                    name: '其他',
+                    data: [62, 82, 91, 84, 109, 110, 120, 256, 852]
+                }]
+            }
+            Table({
+                el: 'tablebox',
+                data: data,
+                fixedCol: 1  // 左侧固定的列
+            })
+        </script>
+    </body>
+
+</html>
